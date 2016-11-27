@@ -9,7 +9,7 @@ export default class Search extends Component{
         return (
             <form className="navbar-form navbar-left">
             <div className="input-group">
-                <input type="text" className="form-control" placeholder="Search"> </input>
+                <input type="text" className="form-control" placeholder="Search"/>
                     <div className="input-group-btn">
                         <button className="btn btn-default" type="submit">
                             <i className="glyphicon glyphicon-search"> </i>

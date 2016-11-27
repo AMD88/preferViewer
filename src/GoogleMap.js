@@ -4,11 +4,14 @@ import fetch from 'isomorphic-fetch';
 //require('es6-promise').polyfill();
 
 //import shouldPureComponentUpdate from 'react-pure-render/function';
-
+var rows = [];
 import GoogleMap from 'google-map-react';
 import MyGreatPlace from './my_great_place.jsx';
 
+
 export default class SimpleMapPage extends Component {
+
+
     static defaultProps = {
         center: {lat: 35.685875, lng: -102.988831},
         zoom: 4,
@@ -24,13 +27,16 @@ export default class SimpleMapPage extends Component {
 
         this.state = {
             statuses:{},
-            coordinatesArray: []
+            coordinatesArray: [],
+
         };
     }
+
 
     componentDidMount(){
         this.dataFetch();
     }
+
 
     dataFetch(){
         // fetch('http://localhost:8080/search/tacos') .then(function(response) {
@@ -53,12 +59,15 @@ export default class SimpleMapPage extends Component {
             return json;
         }).then(json => {
             this.setState(json);
-            /*for(var i=0;i<100;i++) {
+
+            for(var i=0;i<100;i++) {
 
                 if(json.statuses[i].coordinates) {
+                   rows.push(<MyGreatPlace lat={json.statuses[i].coordinates.coordinates[0]} lng={json.statuses[i].coordinates.coordinates[1]} />);
+                    //rows.push(<MyGreatPlace lat={66.160507} lng={-153.369141} />);
                     console.log(json.statuses[i].coordinates.coordinates);
                 }
-            }*/
+            }
             return json;
         });
 
@@ -72,7 +81,9 @@ export default class SimpleMapPage extends Component {
     }
     b(){
         if(this.state.statuses[0]){
-            console.log(this.state.statuses[0].coordinates.coordinates)}
+            console.log(this.state.statuses[0].coordinates.coordinates)
+
+        }
 
 
 
@@ -80,8 +91,14 @@ export default class SimpleMapPage extends Component {
     }
     render() {
         return (
+            <GoogleMap
+                apiKey={"AIzaSyAMEYanwIaEqfx_X2vIYGGAnmHuqQupVzA"}
+                defaultCenter={this.props.center}
+                defaultZoom={this.props.zoom}>
+                {rows}
 
-<div>{this.dataFetch()}</div>
+    </GoogleMap>
+
 
            /* <GoogleMap
                 apiKey={"AIzaSyAMEYanwIaEqfx_X2vIYGGAnmHuqQupVzA"}
