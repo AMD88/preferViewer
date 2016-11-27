@@ -8,10 +8,7 @@ var rows = [];
 import GoogleMap from 'google-map-react';
 import MyGreatPlace from './my_great_place.jsx';
 
-
 export default class SimpleMapPage extends Component {
-
-
     static defaultProps = {
         center: {lat: 35.685875, lng: -102.988831},
         zoom: 4,
@@ -27,16 +24,13 @@ export default class SimpleMapPage extends Component {
 
         this.state = {
             statuses:{},
-            coordinatesArray: [],
-
+            coordinatesArray: []
         };
     }
-
 
     componentDidMount(){
         this.dataFetch();
     }
-
 
     dataFetch(){
         // fetch('http://localhost:8080/search/tacos') .then(function(response) {
