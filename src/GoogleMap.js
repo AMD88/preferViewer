@@ -80,27 +80,27 @@ export default class SimpleMapPage extends Component {
     }
     render() {
         return (
+//
+// <div>{this.dataFetch()}</div>
 
-<div>{this.dataFetch()}</div>
-
-           /* <GoogleMap
+            <GoogleMap
                 apiKey={"AIzaSyAMEYanwIaEqfx_X2vIYGGAnmHuqQupVzA"}
                 defaultCenter={this.props.center}
                 defaultZoom={this.props.zoom}>
-                <MyGreatPlace lat={27.994402} lng={-81.760254} /!* Kreyser Avrora *!/ />
-                <MyGreatPlace lat={61.955413} lng={36.337844} /!* Kreyser Avrora *!/ />
-                <MyGreatPlace lat={100.955413} lng={33.337844} /!* Kreyser Avrora *!/ />
-                <MyGreatPlace lat={39.876019} lng={-117.224121} /!* Kreyser Avrora *!/ />
-                <MyGreatPlace lat={45.367584} lng={-68.972168} /!* Kreyser Avrora *!/ />
-                <MyGreatPlace lat={44.182205} lng={-84.506836} /!* Kreyser Avrora *!/ />
-                <MyGreatPlace lat={33.247875} lng={-83.441162} /!* Kreyser Avrora *!/ />
-                <MyGreatPlace lat={44.182205} lng={-84.506836} /!* Kreyser Avrora *!/ />
-                <MyGreatPlace lat={21.289373} lng={-157.917480} /!* Kreyser Avrora *!/ />
-                <MyGreatPlace lat={66.160507} lng={-153.369141} /!* Kreyser Avrora *!/ />
-                <MyGreatPlace lat={35.860119} lng={-86.660156} /!* Kreyser Avrora *!/ />
+                <MyGreatPlace lat={27.994402} lng={-81.760254} /* Kreyser Avrora */ />
+                <MyGreatPlace lat={61.955413} lng={36.337844} /* Kreyser Avrora */ />
+                <MyGreatPlace lat={100.955413} lng={33.337844} /* Kreyser Avrora */ />
+                <MyGreatPlace lat={39.876019} lng={-117.224121} /* Kreyser Avrora */ />
+                <MyGreatPlace lat={45.367584} lng={-68.972168} /* Kreyser Avrora */ />
+                <MyGreatPlace lat={44.182205} lng={-84.506836} /* Kreyser Avrora */ />
+                <MyGreatPlace lat={33.247875} lng={-83.441162} /* Kreyser Avrora */ />
+                <MyGreatPlace lat={44.182205} lng={-84.506836} /* Kreyser Avrora */ />
+                <MyGreatPlace lat={21.289373} lng={-157.917480} /* Kreyser Avrora */ />
+                <MyGreatPlace lat={66.160507} lng={-153.369141} /* Kreyser Avrora */ />
+                <MyGreatPlace lat={35.860119} lng={-86.660156} /* Kreyser Avrora */ />
 
-                <MyGreatPlace {...this.props.greatPlaceCoords} text={'B'} /!* road circle *!/ />
-            </GoogleMap>*/
+                <MyGreatPlace {...this.props.greatPlaceCoords} text={'B'} /* road circle */ />
+            </GoogleMap>
 
         );
 
